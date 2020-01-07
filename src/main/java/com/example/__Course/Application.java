@@ -1,4 +1,4 @@
-package com.example.__PostNotes;
+package com.example.__Course;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

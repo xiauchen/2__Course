@@ -1,6 +1,6 @@
-package com.example.__PostNotes.service;
+package com.example.__Course.service;
 
-import com.example.__PostNotes.po.Student;
+import com.example.__Course.po.Student;
 import javassist.NotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

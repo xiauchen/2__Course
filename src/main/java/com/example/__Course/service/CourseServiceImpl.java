@@ -1,6 +1,7 @@
-package com.example.__PostNotes.service;
+package com.example.__Course.service;
 
-import com.example.__PostNotes.po.Course;
+import com.example.__Course.dao.CourseRepository;
+import com.example.__Course.po.Course;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,11 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CourseServiceImpl implements CourseService {
     @Autowired
-    private com.example.__PostNotes.dao.CourseRepository courseRepository;
+    private CourseRepository courseRepository;
 
     @Transactional
     @Override
@@ -101,5 +103,15 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public void deleteCourse(Long id) {
         courseRepository.deleteById(id);
+    }
+
+    @Override
+    public Course getCourseByName(String name) {
+        return null;
+    }
+
+    @Override
+    public Optional<Course> getCourseById(Long id) {
+        return courseRepository.findById(id);
     }
 }

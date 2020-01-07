@@ -1,11 +1,12 @@
-package com.example.__PostNotes.service;
+package com.example.__Course.service;
 
-import com.example.__PostNotes.po.Course;
+import com.example.__Course.po.Course;
 import javassist.NotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CourseService {
     Course saveCourse(Course course);
@@ -25,6 +26,10 @@ public interface CourseService {
     Course updateCourse(Long id, Course course) throws NotFoundException;
 
     void deleteCourse(Long id);
+
+    Course getCourseByName(String name);
+
+    Optional<Course> getCourseById(Long id);
 
 //    Page<Course> listBlog(String query,Pageable pageable);
 //

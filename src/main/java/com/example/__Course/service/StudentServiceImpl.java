@@ -1,12 +1,10 @@
-package com.example.__PostNotes.service;
+package com.example.__Course.service;
 
-import com.example.__PostNotes.po.Student;
+import com.example.__Course.po.Student;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,7 +14,7 @@ import java.util.List;
 @Service
 public class StudentServiceImpl implements StudentService{
     @Autowired
-    private com.example.__PostNotes.dao.StudentRepository StudentRepository;
+    private com.example.__Course.dao.StudentRepository StudentRepository;
 
     @Transactional
     @Override
