@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/course?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Abc9761008
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
+
+logging:
+  level:
+    root: warn
+    com.moon.blog: info
+  file:
+    name: log/blog.log
+server:
+  port: 8081

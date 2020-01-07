@@ -1,0 +1,13 @@
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('1', 'youxiaroad', 'Java', '2', 'Bol', '990');
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('2', 'youxiaroad', 'React', '2', 'Bol', '990');
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('3', 'youxiaroad', 'Os', '2', 'Bol', '990');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('1', '4', 'JE', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('2', '4', 'Vincent', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('3', '3', 'S', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('4', '3', 'Singing', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('5', '3', 'Ted', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('6', '3', 'James', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('7', '3', 'Eclair', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('8', '2', 'Peter', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('9', '2', 'Beer', '0129999999');
+INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('10', '2', 'Moon', '0129999999');
