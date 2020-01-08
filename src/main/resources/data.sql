@@ -1,6 +1,6 @@
-INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('1', 'youxiaroad', 'Java', '2', 'Bol', '990');
-INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('2', 'youxiaroad', 'React', '2', 'Bol', '990');
-INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('3', 'youxiaroad', 'Os', '2', 'Bol', '990');
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('1', 'youxiaroad', 'Os', '4', 'Oos', '990');
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('2', 'jiangnanroad', 'Java', '5', 'Jos', '880');
+INSERT INTO `course`.`c_course` (`id`, `location`, `name`, `student_number`, `teacher`, `time`) VALUES ('3', 'nanjingroad', 'React', '2', 'Ros', '770');
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('1', '4', 'JE', '0129999999');
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('2', '4', 'Vincent', '0129999999');
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('3', '3', 'S', '0129999999');
@@ -11,3 +11,6 @@ INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES 
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('8', '2', 'Peter', '0129999999');
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('9', '2', 'Beer', '0129999999');
 INSERT INTO `course`.`c_student` (`id`, `grade`, `name`, `phone_number`) VALUES ('10', '2', 'Moon', '0129999999');
+LOCK TABLES `c_course_students` Write;
+INSERT INTO `c_course_students` VALUES (1,1),(1,2),(1,3),(1,8),(2,1),(2,2),(2,3),(2,5),(2,8),(3,1),(3,2);
+UNLOCK TABLES;
