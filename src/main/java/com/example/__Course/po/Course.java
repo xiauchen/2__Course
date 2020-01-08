@@ -89,7 +89,6 @@ public class Course {
                 ", teacher='" + teacher + '\'' +
                 ", time='" + time + '\'' +
                 ", studentNumber=" + studentNumber +
-                ", students=" + students +
                 '}';
     }
 }
