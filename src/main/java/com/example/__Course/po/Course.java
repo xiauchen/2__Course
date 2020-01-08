@@ -19,7 +19,7 @@ public class Course {
     private Integer studentNumber;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Student> students = new ArrayList<>();
+    private List<Student> student = new ArrayList<>();
 
     public Course() {
     }
@@ -73,11 +73,11 @@ public class Course {
     }
 
     public List<Student> getStudents() {
-        return students;
+        return student;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    public void setStudents(List<Student> student) {
+        this.student = student;
     }
 
     @Override

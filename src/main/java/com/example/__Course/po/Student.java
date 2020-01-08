@@ -9,22 +9,22 @@ import java.util.List;
 public class Student {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private String name;
     private Integer grade;
     private Integer phoneNumber;
 
-    @ManyToMany(mappedBy = "students")
-    private List<Course> courses = new ArrayList<>();
+    @ManyToMany(mappedBy = "student")
+    private List<Course> course = new ArrayList<>();
 
     public Student() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -53,11 +53,11 @@ public class Student {
     }
 
     public List<Course> getCourses() {
-        return courses;
+        return course;
     }
 
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
+    public void setCourses(List<Course> course) {
+        this.course = course;
     }
 
     @Override

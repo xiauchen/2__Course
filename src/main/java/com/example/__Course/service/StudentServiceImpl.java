@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -83,5 +84,20 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public void deleteStudent(Long id) {
         StudentRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Student> listStudentByCourseId(Long id) {
+        return StudentRepository.findByCourseId(id);
+    }
+
+    @Override
+    public List<Student> listStudent(String query, Pageable pageable) {
+        return StudentRepository.findByQuery(query,pageable);
+    }
+
+    @Override
+    public Optional<Student> getStudentById(Long id) {
+        return StudentRepository.findById(id);
     }
 }

@@ -114,4 +114,14 @@ public class CourseServiceImpl implements CourseService {
     public Optional<Course> getCourseById(Long id) {
         return courseRepository.findById(id);
     }
+
+    @Override
+    public List<Course> listCourseByStudentId(Long id) {
+        return courseRepository.findByStudentId(id);
+    }
+
+    @Override
+    public List<Course> listCourse(String query, Pageable pageable) {
+        return courseRepository.findByQuery(query,pageable);
+    }
 }

@@ -15,57 +15,53 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-public class IndexController {
+public class StudentShowController {
     //透過 @RequestMapping 指定從/會被對應到此hello()方法
     @Autowired
     private CourseService courseService;
     @Autowired
     private StudentService studentService;
-    public IndexController() {
-    }
-    //主頁
-    @GetMapping("/")
-    public String index() throws JSONException {
+
+    @GetMapping("/s")
+    public String student() throws JSONException {
         JSONObject data = new JSONObject();
-        List<Course> c = courseService.listCourse();
+        List<Student> s = studentService.listStudent();
         int i=1;
-        for (Course c1: c
-             ) {
-            data.put("course"+i,c1);
-            data.put("course"+i,studentService.listStudentByCourseId(c1.getId()));
+        for (Student s1: s
+        ) {
+            data.put("student"+i,s1);
+            data.put("student"+i,courseService.listCourseByStudentId(s1.getId()));
             i++;
         }
         return data.toString();
     }
     //獲取byId ok
-    @GetMapping("/{id}")
+    @GetMapping("/s/{id}")
     public String tags(@PathVariable Long id) throws Exception {
         JSONObject data = new JSONObject();
-        data.put("course",courseService.getCourseById(id).orElseThrow(()-> new Exception("What Null")));
-        data.accumulate("student",studentService.listStudentByCourseId(id));
+        data.put("student",studentService.getStudentById(id).orElseThrow(()-> new Exception("What Null")));
+        data.accumulate("course",courseService.listCourseByStudentId(id));
         return data.toString();
     }
     //刪除 ok
-    @DeleteMapping("/{id}/delete")
+    @DeleteMapping("/s/{id}/delete")
     public String delete(@PathVariable Long id){
-        courseService.deleteCourse(id);
+        studentService.deleteStudent(id);
         return "400";
     }
     //搜尋
-    @PostMapping("/search")
+    @PostMapping("/s/search")
     public String search(@PageableDefault(size = 7,sort ={"updateTime"},direction = Sort.Direction.DESC) Pageable pageable,
                          @RequestParam String query, Model model) throws JSONException {
         JSONObject data = new JSONObject();
-        List<Course> c=courseService.listCourse("%"+query+"%",pageable);
+        List<Student> s = studentService.listStudent("%"+query+"%",pageable);
         int i=1;
-        for (Course c1: c
+        for (Student s1: s
         ) {
-            data.put("course"+i,c1);
-            data.accumulate("course"+i,studentService.listStudentByCourseId(c1.getId()));
+            data.put("student"+i,s1);
+            data.accumulate("student"+i,courseService.listCourseByStudentId(s1.getId()));
             i++;
         }
         return data.toString();
     }
-
 }

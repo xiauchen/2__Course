@@ -31,6 +31,10 @@ public interface CourseService {
 
     Optional<Course> getCourseById(Long id);
 
+    List<Course> listCourseByStudentId(Long id);
+
+    List<Course> listCourse(String query, Pageable pageable);
+
 //    Page<Course> listBlog(String query,Pageable pageable);
 //
 //    public Course getAndConvert(Long id) throws NotFoundException;
