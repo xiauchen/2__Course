@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:course;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    platform: h2
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database: default
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.H2Dialect
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /console
+
+logging:
+  level:
+    root: warn
+    com.moon.blog: info
+  file:
+    name: log/blog.log
+server:
+  port: 8082

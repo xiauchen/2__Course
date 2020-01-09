@@ -2,7 +2,7 @@ spring:
   thymeleaf:
     mode: HTML
   profiles:
-    active: dev
+    active: h2
   messages:
     basename: i18n/messages
     encoding: UTF-8
