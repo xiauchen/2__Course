@@ -2,6 +2,7 @@ package com.example.__Course.po;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /*
@@ -18,8 +19,12 @@ public class Course {
     private String time;
     private Integer studentNumber;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST})
+    @ManyToMany(mappedBy = "course")
     private List<Student> student = new ArrayList<>();
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="updateTime")
+    private Date updateTime;
 
     public Course() {
     }
@@ -80,6 +85,22 @@ public class Course {
         this.student = student;
     }
 
+    public List<Student> getStudent() {
+        return student;
+    }
+
+    public void setStudent(List<Student> student) {
+        this.student = student;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
@@ -89,6 +110,7 @@ public class Course {
                 ", teacher='" + teacher + '\'' +
                 ", time='" + time + '\'' +
                 ", studentNumber=" + studentNumber +
+                ", updateTime=" + updateTime +
                 '}';
     }
 }

@@ -1,10 +1,10 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-pn77u6e45cf9f1514lo.mysql.zhangbei.rds.aliyuncs.com:3306/course?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/course?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: Abc9761008
-    initialization-mode: never
+    initialization-mode: always
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     dialect: org.hibernate.dialect.MySQL5Dialect
@@ -12,7 +12,7 @@ spring:
       hibernate:
         globally_quoted_identifiers: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     show-sql: true
     open-in-view: false
 

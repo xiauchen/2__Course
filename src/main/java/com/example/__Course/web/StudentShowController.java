@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class StudentShowController {
     //透過 @RequestMapping 指定從/會被對應到此hello()方法
     @Autowired

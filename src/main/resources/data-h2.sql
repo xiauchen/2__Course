@@ -1,0 +1,16 @@
+INSERT INTO   c_course  ( id ,  location ,  name ,  studentNumber ,  teacher ,  time , updateTime) VALUES ('1', 'youxiaroad', 'Os', '4', 'Oos', '990','1999-09-08 00:00:10');
+INSERT INTO   c_course  ( id ,  location ,  name ,  studentNumber ,  teacher ,  time , updateTime) VALUES ('2', 'jiangnanroad', 'Java', '5', 'Jos', '880','1999-09-08 00:00:10');
+INSERT INTO   c_course  ( id ,  location ,  name ,  studentNumber ,  teacher ,  time , updateTime) VALUES ('3', 'nanjingroad', 'React', '2', 'Ros', '770','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('1', '4', 'JE', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('2', '4', 'Vincent', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('3', '3', 'S', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('4', '3', 'Singing', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('5', '3', 'Ted', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('6', '3', 'James', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('7', '3', 'Eclair', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('8', '2', 'Peter', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('9', '2', 'Beer', '0129999999','1999-09-08 00:00:10');
+INSERT INTO   c_student  ( id ,  grade ,  name ,  phoneNumber , updateTime ) VALUES ('10', '2', 'Moon', '0129999999','1999-09-08 00:00:10');
+--LOCK TABLES  c_student_course  Write;
+INSERT INTO  c_student_course  VALUES (1,1),(2,1),(3,1),(8,1),(1,2),(2,2),(3,2),(5,2),(8,2),(1,3),(2,3);
+--UNLOCK TABLES;
